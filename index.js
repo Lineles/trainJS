@@ -1,4 +1,9 @@
-let person1 = {
+let userNameInput = "Bob16"; 
+let userPasswortInput = "";
+
+const UserDataBase = [];
+
+let Hansi = {
     userId: 0001,
     name: "Hannes",
     userName: "Hansi",
@@ -8,8 +13,9 @@ let person1 = {
     country: "Germany",
     subStatus: "Unsubscribt",
 }
+UserDataBase.push(Hansi); 
 
-let person2 = {
+let Lissi1 = {
     userId: 0002,
     name: "Lisa",
     userName: "Lissi1",
@@ -19,8 +25,9 @@ let person2 = {
     country: "Great Britain",
     subStatus: "Subscribt",
 }
+UserDataBase.push(Lissi1); 
 
-let person3 = {
+let Bob16 = {
     userId: 0003,
     name: "Max",
     userName: "Bob16",
@@ -30,8 +37,9 @@ let person3 = {
     country: "Great Britain",
     subStatus: "Unsubscribt",
 }
+UserDataBase.push(Bob16); 
 
-let person4 = {
+let kevkev = {
     userId: 0004,
     name: "Kevin",
     userName: "kevkev",
@@ -41,34 +49,32 @@ let person4 = {
     country: "Austria",
     subStatus: "Subscribt",
 }
-
-// input 
-
-// let inputName = "Hannes";
-// let inputPassword = "gafsgfe5"; 
-
-// let inputName ="Lisa";
-// let inputPassword = "hhga"; 
-
-// let inputName = "Max"; 
-// let inputPassword = "ohcackav"; 
-
-let inputName = "Kevin"; 
-let inputPassword = "544557"; 
+UserDataBase.push(kevkev); 
 
 
-if (person4.name === inputName) {
-    checkUsername = true;
-} else { checkUsername = false } 
+for (i = 0; i < UserDataBase.length; i++) {
+    if  (UserDataBase[i].userName === userNameInput) {
+        console.log("ok");
+    } else { 
+        console.log("nononon");
+    }  
+ }
 
-if (person4.password === inputPassword) {
-    checkPassword = true;
-} else { checkPassword = false }
 
-if (checkUsername && checkPassword) {
-    if (person4.language === "German") {console.log("Guten Tag " + person4.userName)
-    } else {console.log("welcome " + person4.userName)}  
-} else { 
-    if (person4.language === "German") {console.log("Dein Username oder Passwort ist falsch, versuche es nocheinmal.")}
-    else {console.log("Your Username or Password is wrong, try again") }   
-}
+
+
+// if (person4.name === inputName) {
+//     checkUsername = true;
+// } else { checkUsername = false } 
+
+// if (person4.password === inputPassword) {
+//     checkPassword = true;
+// } else { checkPassword = false }
+
+// if (checkUsername && checkPassword) {
+//     if (person4.language === "German") {console.log("Guten Tag " + person4.userName)
+//     } else {console.log("welcome " + person4.userName)}  
+// } else { 
+//     if (person4.language === "German") {console.log("Dein Username oder Passwort ist falsch, versuche es nocheinmal.")}
+//     else {console.log("Your Username or Password is wrong, try again") }   
+// }
