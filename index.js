@@ -1,5 +1,21 @@
+// let userNameInput = "Hansi"; 
+// let userPasswortInput = "gafsgfe5";
+
+// let userNameInput = "Bob16"; 
+// let userPasswortInput = "ohcackav";
+
+// let userNameInput = "Lissi1"; 
+// let userPasswortInput = "hhga";
+
+// let userNameInput = "kevkev"; 
+// let userPasswortInput = "544557";
+
 let userNameInput = "Bob16"; 
-let userPasswortInput = "";
+let userPasswortInput = "544f557";
+
+
+
+
 
 const UserDataBase = [];
 
@@ -54,27 +70,23 @@ UserDataBase.push(kevkev);
 
 for (i = 0; i < UserDataBase.length; i++) {
     if  (UserDataBase[i].userName === userNameInput) {
-        console.log("ok");
-    } else { 
-        console.log("nononon");
-    }  
- }
+        var logedInUser = UserDataBase[i]; 
+    } 
+}
+
+if (logedInUser.password === userPasswortInput) {
+    checkPassword = true;
+} else { checkPassword = false }
+
+if (logedInUser.userName === userNameInput) {
+    checkUsername = true;
+} else { checkUsername = false }
 
 
-
-
-// if (person4.name === inputName) {
-//     checkUsername = true;
-// } else { checkUsername = false } 
-
-// if (person4.password === inputPassword) {
-//     checkPassword = true;
-// } else { checkPassword = false }
-
-// if (checkUsername && checkPassword) {
-//     if (person4.language === "German") {console.log("Guten Tag " + person4.userName)
-//     } else {console.log("welcome " + person4.userName)}  
-// } else { 
-//     if (person4.language === "German") {console.log("Dein Username oder Passwort ist falsch, versuche es nocheinmal.")}
-//     else {console.log("Your Username or Password is wrong, try again") }   
-// }
+if (checkUsername && checkPassword) {
+    if (logedInUser.language === "German") {console.log("Guten Tag " + logedInUser.name)
+    } else {console.log("welcome " + logedInUser.name)}  
+} else { 
+    if (logedInUser.language === "German") {console.log("Dein Username oder Passwort ist falsch, versuche es nocheinmal.")}
+    else {console.log("Your Username or Password is wrong, try again") }   
+}
