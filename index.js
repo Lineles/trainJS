@@ -36,7 +36,7 @@ let userPasswortInput = "hhga";
 
 
 //
-// Data Base 
+////////////////////////////////////////////////////////////////// Data Base ////////////////////////////////////////////////////////////7
 //
 
 const UserDataBase = [];
@@ -122,7 +122,7 @@ UserDataBase.push(Jogi);
 
 
 //
-// Dater Base Check
+/////////////////////////////////////////////////////////////////////////// Dater Base Check ////////////////////////////////////////////////////////////////////
 //
 for (i = 0; i < UserDataBase.length; i++) {
     if  (UserDataBase[i].userName !== userNameInput) {
@@ -130,7 +130,7 @@ for (i = 0; i < UserDataBase.length; i++) {
     } else { var logedInUser = UserDataBase[i]; 
 
         //
-        // Password check
+        ///////////////////////////////////////////////////// Password check ////////////////////////////////////
         //
         if (logedInUser.password === userPasswortInput) {
             checkPassword = true;
@@ -144,7 +144,7 @@ for (i = 0; i < UserDataBase.length; i++) {
         if (checkUsername && checkPassword) {
         
             //
-            // Substatus Check 
+            ///////////////////////////////////////////////// Substatus Check //////////////////////////////////////////
             //
             if (logedInUser.subStatus === "Subscribt") { 
                 accesEnglish = "You have full acces to  all content!";
@@ -157,20 +157,20 @@ for (i = 0; i < UserDataBase.length; i++) {
              }
 
             //
-            // Language check & console.log
+            //////////////////////////////////////////////// Language check & console.log ///////////////////////////////////
             //
             if (logedInUser.language === "German") {
                 console.log("Guten Tag " + logedInUser.name);
                 console.log(accesGerman);
             } else if (logedInUser.language === "Spanish") {
                 if (logedInUser.sex === "male") {
-                    console.log("bienvenidos " + logedInUser.name);
+                    console.log("Bienvenidos " + logedInUser.name);
                 } else {
-                    console.log("bienvenidas " + logedInUser.name);
+                    console.log("Bienvenidas " + logedInUser.name);
                 }
                 console.log(accesSpanish);
             }  else { 
-                console.log("welcome " + logedInUser.name);
+                console.log("Welcome " + logedInUser.name);
                 console.log(accesEnglish); }
 
         } else { 
